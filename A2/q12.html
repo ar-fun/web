@@ -1,0 +1,201 @@
+<!--
+Name: Anshul Raj
+Reg No: 24BAI0183
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Portal</title>
+    <style>
+        body {
+            background-color: skyblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        .form-section {
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .form-section h2 {
+            border-bottom: 1px solid white;
+            padding-bottom: 10px;
+        }
+
+        .input-group {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            background-color: white;
+            color: darkblue;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Registration Portal</h1>
+
+    <nav>
+        <a href="#personal">Personal Information</a>
+        <a href="#academic">Academic Details</a>
+        <a href="#address">Address Information</a>
+        <a href="#account">Account Credentials</a>
+    </nav>
+
+    <form onsubmit="alert('Form Submitted Successfully'); return false;">
+        
+        <div id="personal" class="form-section">
+            <h2>Section 1: Personal Information</h2>
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Date of Birth</label>
+                <input type="date" required>
+            </div>
+            <div class="input-group">
+                <label>Gender</label>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" required>
+            </div>
+            <div class="input-group">
+                <label>Mobile Number</label>
+                <input type="text" required>
+            </div>
+        </div>
+
+        <div id="academic" class="form-section">
+            <h2>Section 2: Academic Details</h2>
+            <div class="input-group">
+                <label>Register Number</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Degree Program</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Department</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Year of Study</label>
+                <input type="number" required>
+            </div>
+        </div>
+
+        <div id="address" class="form-section">
+            <h2>Section 3: Address Information</h2>
+            <div class="input-group">
+                <label>Door Number</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Street Name</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>City</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>State</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Pincode</label>
+                <input type="text" required>
+            </div>
+        </div>
+
+        <div id="account" class="form-section">
+            <h2>Section 4: Account Credentials</h2>
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" required>
+            </div>
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" required>
+            </div>
+        </div>
+
+        <div class="submit-container">
+            <button type="submit" class="submit-btn">Submit Registration</button>
+        </div>
+
+    </form>
+<br> <br>
+<footer style="text-align:center; padding:10px; background:#eee;">
+    Name: Anshul Raj<br>Reg No: 24BAI0183
+</footer>
+</body>
+</html>

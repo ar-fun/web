@@ -1,0 +1,9 @@
+h1 {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+p {
+    font-style: italic;
+    color: #333;
+}
