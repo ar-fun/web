@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <p id="msg">Click the button to see the message.</p>
+
+  <button onclick="sayHello()">Click Me</button>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function sayHello() {
+      // Variable declaration
+      var element = document.getElementById("msg");
+
+      // DOM manipulation using outerHTML
+      // This replaces the entire <p> tag with the new <h1> tag
+      element.outerHTML = "<h1>Hello, world!</h1>";
+    }
+  </script>
+
+</body>
+</html>

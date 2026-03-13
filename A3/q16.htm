@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .gallery { position: relative; height: 300px; }
+    
+    .photo {
+      position: absolute; /* Allows images to overlap */
+      width: 200px;
+      height: 150px;
+      border: 5px solid white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      cursor: pointer;
+    }
+
+    /* Pre-positioning images slightly apart */
+    #img1 { top: 10px; left: 10px; background-color: red; }
+    #img2 { top: 40px; left: 60px; background-color: green; }
+    #img3 { top: 70px; left: 110px; background-color: blue; }
+  </style>
+</head>
+<body>
+
+  <h2>Stacking Image Gallery</h2>
+  <p>Click an image to bring it to the front.</p>
+
+  <div class="gallery">
+    <div id="img1" class="photo" onclick="bringToFront(this)"></div>
+    <div id="img2" class="photo" onclick="bringToFront(this)"></div>
+    <div id="img3" class="photo" onclick="bringToFront(this)"></div>
+  </div>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    // Global variable to track the highest z-index currently used
+    var topIndex = 1;
+
+    function bringToFront(element) {
+      // Use prefix increment operator to increase count then assign
+      element.style.zIndex = ++topIndex;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Predefined CSS classes */
+    .normal { font-style: normal; font-weight: normal; font-variant: normal; }
+    .italic-style { font-style: italic; }
+    .bold-style { font-weight: bold; }
+    .caps-style { font-variant: small-caps; }
+    
+    #textMessage { font-size: 24px; transition: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <fieldset>
+    <legend>Text Styler</legend>
+    
+    <p id="textMessage">Style this text!</p>
+
+    <button onclick="applyStyle('normal')">Reset</button>
+    <button onclick="applyStyle('italic-style')">Italic</button>
+    <button onclick="applyStyle('bold-style')">Bold</button>
+    <button onclick="applyStyle('caps-style')">Small Caps</button>
+  </fieldset>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function applyStyle(newClass) {
+      // Accessing the element
+      var element = document.getElementById("textMessage");
+      
+      // Using className property to change the CSS class
+      element.className = newClass;
+    }
+  </script>
+
+</body>
+</html>

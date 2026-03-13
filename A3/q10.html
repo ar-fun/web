@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h3>Select Subjects:</h3>
+  <input type="checkbox" name="subject" value="Math"> Math<br>
+  <input type="checkbox" name="subject" value="Science"> Science<br>
+  <input type="checkbox" name="subject" value="History"> History<br>
+  <input type="checkbox" name="subject" value="Art"> Art<br><br>
+
+  <button onclick="countCheckboxes()">Process Selection</button>
+
+  <p id="result"></p>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function countCheckboxes() {
+      var checkboxes = document.getElementsByName("subject");
+      var selectedSubjects = []; // Array to store values
+      var count = 0;             // Counter variable
+
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          // Add to array using push()
+          selectedSubjects.push(checkboxes[i].value);
+          // Increment the counter
+          count++;
+        }
+      }
+
+      // Convert array to string using join()
+      var subjectString = selectedSubjects.join(", ");
+
+      document.getElementById("result").innerHTML = 
+        "Count: " + count + "<br>Subjects: " + (subjectString || "None");
+    }
+  </script>
+
+</body>
+</html>

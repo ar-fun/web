@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  Enter N: <input type="number" id="limit">
+  <button onclick="printNumbers()">Print Range</button>
+
+  <p id="output"></p>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function printNumbers() {
+      // Get input and convert to integer
+      var n = parseInt(document.getElementById("limit").value);
+      
+      // Counter initialization
+      var counter = 1;
+      var text = "";
+
+      // While loop with condition checking
+      while (counter <= n) {
+        text += counter + " "; // Add number to string
+        counter++;            // Increment counter
+      }
+
+      // Displaying output
+      document.getElementById("output").innerHTML = "Numbers: " + text;
+    }
+  </script>
+
+</body>
+</html>

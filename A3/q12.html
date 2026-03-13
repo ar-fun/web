@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h3>Select at least 3 Skills:</h3>
+  <input type="checkbox" name="skill" value="HTML"> HTML<br>
+  <input type="checkbox" name="skill" value="CSS"> CSS<br>
+  <input type="checkbox" name="skill" value="JavaScript"> JavaScript<br>
+  <input type="checkbox" name="skill" value="Python"> Python<br>
+  <input type="checkbox" name="skill" value="SQL"> SQL<br><br>
+
+  <button onclick="validateSkills()">Submit Skills</button>
+
+  <p id="msg"></p>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function validateSkills() {
+      var checkboxes = document.getElementsByName("skill");
+      var selected = [];
+      
+      // for loop using index and .length property
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          selected.push(checkboxes[i].value);
+        }
+      }
+
+      // Validation logic
+      if (selected.length < 3) {
+        document.getElementById("msg").style.color = "red";
+        document.getElementById("msg").innerHTML = "Error: Please select at least 3 skills.";
+      } else {
+        document.getElementById("msg").style.color = "green";
+        // String concatenation of array elements
+        document.getElementById("msg").innerHTML = "Skills accepted: " + selected.join(", ");
+      }
+    }
+  </script>
+
+</body>
+</html>

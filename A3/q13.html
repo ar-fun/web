@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2>Product Order Form</h2>
+  <form id="orderForm">
+    <fieldset>
+      <legend>Electronics</legend>
+      <input type="checkbox" class="product" value="500"> Laptop ($500)<br>
+      <input type="checkbox" class="product" value="100"> Mouse ($100)
+    </fieldset>
+
+    <fieldset>
+      <legend>Accessories</legend>
+      <input type="checkbox" class="product" value="20"> Case ($20)<br>
+      <input type="checkbox" class="product" value="15"> Cable ($15)
+    </fieldset>
+
+    <br>
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+  </form>
+
+  <h3 id="totalDisplay">Total: $0</h3>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function calculateTotal() {
+      // Get all elements with class 'product'
+      var items = document.getElementsByClassName("product");
+      var total = 0;
+
+      // Modern for...of loop (iterates directly over the elements)
+      for (var item of items) {
+        if (item.checked) {
+          // parseFloat converts the string value to a number
+          total += parseFloat(item.value);
+        }
+      }
+
+      document.getElementById("totalDisplay").innerHTML = "Total: $" + total;
+    }
+  </script>
+
+</body>
+</html>

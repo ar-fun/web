@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="emailForm">
+    First Name: <input type="text" name="fname"><br><br>
+    Last Name: <input type="text" name="lname"><br><br>
+    
+    <button type="button" onclick="generateEmail(this.form)">Generate Email</button>
+  </form>
+
+  <p id="result"></p>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function generateEmail(form) {
+      // Accessing input values using form.elements
+      var first = form.elements["fname"].value;
+      var last = form.elements["lname"].value;
+
+      // String concatenation with + operator
+      var email = first + "." + last + "@park.edu";
+
+      // Displaying the result using innerHTML
+      document.getElementById("result").innerHTML = "Generated: " + email;
+
+      // Clear the form fields
+      form.reset();
+
+      // Set focus back to the first name field
+      form.elements["fname"].focus();
+    }
+  </script>
+
+</body>
+</html>

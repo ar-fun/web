@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <input type="number" id="num1" step="any" placeholder="Number 1">
+  <input type="number" id="num2" step="any" placeholder="Number 2">
+  <br><br>
+
+  <button onclick="calculate('+')">+</button>
+  <button onclick="calculate('-')">-</button>
+  <button onclick="calculate('*')">*</button>
+  <button onclick="calculate('/')">/</button>
+
+  <h3 id="res">Result: </h3>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function calculate(op) {
+      // parseFloat converts text input into a decimal number
+      var n1 = parseFloat(document.getElementById("num1").value);
+      var n2 = parseFloat(document.getElementById("num2").value);
+      var result;
+
+      switch (op) {
+        case '+': result = n1 + n2; break;
+        case '-': result = n1 - n2; break;
+        case '*': result = n1 * n2; break;
+        case '/': 
+          // Division by zero handling
+          result = (n2 === 0) ? "Cannot divide by zero" : n1 / n2; 
+          break;
+      }
+
+      document.getElementById("res").innerHTML = "Result: " + result;
+    }
+  </script>
+
+</body>
+</html>
+

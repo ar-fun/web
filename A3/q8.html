@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  Enter Number: <input type="number" id="num">
+  <button onclick="showTable()">Show Table</button>
+
+  <p id="output"></p>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function showTable() {
+      var n = parseInt(document.getElementById("num").value);
+      var i = 1;      // Counter initialization
+      var text = "";  // Output accumulator
+
+      // Do-while loop: Runs body first, checks condition later
+      do {
+        var result = n * i;
+        text += n + " x " + i + " = " + result + "<br>";
+        i++;          // Increment
+      } while (i <= 10);
+
+      document.getElementById("output").innerHTML = text;
+    }
+  </script>
+
+</body>
+</html>

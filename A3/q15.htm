@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <fieldset>
+    <legend>Font Customizer</legend>
+
+    Size: <input type="range" id="sizeIn" min="10" max="100" value="20" oninput="updateStyle()"> 
+    
+    Text Color: <input type="color" id="colorIn" value="#000000" oninput="updateStyle()">
+    Background: <input type="color" id="bgIn" value="#ffffff" oninput="updateStyle()">
+
+    <hr>
+    
+    <div id="previewText" style="padding: 10px;">
+      Customize my appearance!
+    </div>
+  </fieldset>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function updateStyle() {
+      var target = document.getElementById("previewText");
+      
+      // Reading values from inputs
+      var newSize = document.getElementById("sizeIn").value;
+      var newColor = document.getElementById("colorIn").value;
+      var newBg = document.getElementById("bgIn").value;
+
+      // Directly modifying the style property
+      // JavaScript uses camelCase for CSS (fontSize vs font-size)
+      target.style.fontSize = newSize + "px";
+      target.style.color = newColor;
+      target.style.backgroundColor = newBg;
+    }
+  </script>
+
+</body>
+</html>

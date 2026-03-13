@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>	
+    body { font-family: sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+
+  <h2>Student Information System</h2>
+
+  <form id="studentForm">
+    Name: <input type="text" id="sName"><br><br>
+    ID: <input type="text" id="sID"><br><br>
+    Major: <input type="text" id="sMajor"><br><br>
+    
+    <button type="button" onclick="addStudent()">Add Student</button>
+    <button type="button" onclick="resetForm()">Clear Form</button>
+  </form>
+
+  <table id="studentTable">
+    <thead>
+      <tr><th>Name</th><th>ID</th><th>Major</th></tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    // Global Variable (Array to store objects)
+    var studentList = [];
+
+    function addStudent() {
+      // Create a JavaScript Object
+      var student = {
+        name: document.getElementById("sName").value,
+        id: document.getElementById("sID").value,
+        major: document.getElementById("sMajor").value,
+        // Object method using 'this' keyword
+        getInfo: function() {
+          return "<tr><td>" + this.name + "</td><td>" + this.id + "</td><td>" + this.major + "</td></tr>";
+        }
+      };
+
+      // Add object to array
+      studentList.push(student);
+
+      // Update the display (Dynamic Table Generation)
+      displayStudents();
+
+      // Reset and Focus
+      resetForm();
+    }
+
+    function displayStudents() {
+      var html = "";
+      for (var i = 0; i < studentList.length; i++) {
+        // Calling the object method
+        html += studentList[i].getInfo();
+      }
+      document.getElementById("tableBody").innerHTML = html;
+    }
+
+    function resetForm() {
+      document.getElementById("studentForm").reset();
+      document.getElementById("sName").focus();
+    }
+  </script>
+
+</body>
+</html>
+
+

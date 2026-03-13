@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2>Change Background Color</h2>
+
+  <button type="button" onclick="changeColor('red')">Red</button>
+  <button type="button" onclick="changeColor('green')">Green</button>
+  <button type="button" onclick="changeColor('blue')">Blue</button>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    // Function with a parameter 'newColor'
+    function changeColor(newColor) {
+      // Accessing the body style property directly
+      document.body.style.backgroundColor = newColor;
+    }
+  </script>
+
+</body>
+</html>

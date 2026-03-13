@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h3>Select a Color:</h3>
+  <input type="radio" name="colorGroup" value="Red"> Red<br>
+  <input type="radio" name="colorGroup" value="Green"> Green<br>
+  <input type="radio" name="colorGroup" value="Blue"> Blue<br><br>
+
+  <button onclick="showSelection()">Show Selection</button>
+
+  <p id="result"></p>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    function showSelection() {
+      // Get all elements with the same name as a collection
+      var radios = document.getElementsByName("colorGroup");
+      var pickedColor = "None";
+
+      // Loop through the collection
+      for (var i = 0; i < radios.length; i++) {
+        // Check if the current radio button is selected
+        if (radios[i].checked) {
+          pickedColor = radios[i].value;
+          break; // Stop looking once we find the checked one
+        }
+      }
+
+      document.getElementById("result").innerHTML = "You selected: " + pickedColor;
+    }
+  </script>
+
+</body>
+</html>

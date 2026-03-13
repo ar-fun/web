@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div id="display"></div>
+
+  <footer>
+    Name: Anshul Raj and Reg No: 24BAI0183
+  </footer>
+
+  <script>
+    // 1. Integer Calculation (camelCase names)
+    var rectWidth = 10;
+    var rectHeight = 5;
+    var rectArea = rectWidth * rectHeight;
+
+    // Displaying first result
+    document.getElementById("display").innerHTML = "Integer Area: " + rectArea + "<br>";
+
+    // 2. Demonstrating Loose Typing (Re-assigning to Floats)
+    rectWidth = 12.5; 
+    rectHeight = 4.2;
+    rectArea = rectWidth * rectHeight; // Result will be a float
+
+    // Appending second result
+    document.getElementById("display").innerHTML += "Float Area: " + rectArea;
+  </script>
+
+</body>
+</html>
